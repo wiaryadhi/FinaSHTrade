@@ -1,0 +1,47 @@
+<div>
+  <img src="assets/images/bg.png" style="width: 100vw">
+</div>
+
+<div class="container" style="margin-top: -40%">
+  <div class="mb-5">
+    <img src="assets/images/finash.png" alt="">
+  </div>
+  <div class="d-flex">
+    <form class="d-flex placeholder-glow flex-grow-1 pe-3">
+      <input class="form-control" type="search" placeholder="Cari model, merk dan tahun" aria-label="Search">
+    </form>
+    <button class="btn btn-filter" (click)="openVerticallyCentered(content)">
+      <fa-icon [icon]="faSlidersUp"></fa-icon>
+      &nbsp; Filter
+    </button>
+  </div>
+  <p class="pt-3">Menampilkan 10 mobil dari 100</p>
+<!--  <div class="d-flex">-->
+<!--    <button class="btn btn-warning">Hapus Filter</button>-->
+<!--  </div>-->
+
+  <div class="card">
+    <img src="assets/images/finash.png" alt="">
+    <div class="card-body">
+      <p><strong>HONDA BRV 2020 AT</strong></p>
+      <p>40.000 KM | 2020 | A T</p>
+      <p><strong>RP 200.000.000 ,- </strong></p>
+      <button class="btn btn-bid">BID Harga</button>
+    </div>
+
+  </div>
+
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
